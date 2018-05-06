@@ -23,6 +23,8 @@ JOIN types ON pokemons.primary_type = types.id
 GROUP BY types.name;
 
 --How many pokemon at level 100 does each trainer with at least one level 100 pokemon have? (Hint: your query should not display a trainer
-
+SELECT COUNT(pokemon_trainer.pokemon_id) FROM pokemon_trainer
+WHERE pokemon_trainer.pokelevel = 100
+GROUP BY pokemon_trainer.trainerID;
 
 --How many pokemon only belong to one trainer and no other?
